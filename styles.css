@@ -8,7 +8,7 @@
 .container {
   text-align: center;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   background: rgb(210, 210, 210);
 }
 
@@ -24,18 +24,19 @@
   justify-content: center;
   display: flex;
 }
-
+.container nav ul li:not(.social) {
+  border: 1px solid lightgray;
+}
 .container nav ul li {
   text-align: center;
   padding: 10px;
   list-style: none;
   cursor: pointer;
-  border: 1px solid lightgray;
   padding: 10px 20px;
   margin: 10px;
 }
 
-.container nav ul li:hover {
+.container nav ul li:not(.social):hover {
   background: rgb(159, 87, 11);
 }
 
@@ -69,4 +70,16 @@
 
 .container .items ul li.hide {
   display: none;
+}
+.social {
+  font-size: 50px;
+}
+
+a,
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: rgb(194, 191, 191);
 }
